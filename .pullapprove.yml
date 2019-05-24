@@ -1,41 +1,9 @@
-pullapprove_conditions:
-- "'WIP' not in title"
-- "'hotfix' not in labels"
-
-notifications:
-- when: pull_request.opened
-  # only need to send this to external-contributors
-  comment: >
-    Hey @{{ author }}, please make sure your tests pass and you have looked everything over. Then we will review.
-
-    Thanks for the PR!
-- when: pullapprove.approved
-  comment: "The review is completed. @{{ author }}, please merge this in when ready."
-
 groups:
-  code:
-    reviewers:
-      users:
-      - paolinidesign
-      teams:
-      - team-slug
-    reviews:
-      required: 2  # number of approvals required from this group
-      request: 1  # number of review requests sent at a time
-      request_order: random  # "random" or "given"
-
-  database:
+  pullapprove:
     conditions:
-    - 
-    reviewers:
-      teams:
-      - database
-
-  signoff:
-    conditions:
-    # only asked to review once the other 2 groups are finished (or not applicable)
-    - "'code' in groups.passing"
-    - "'database' in groups.passing"
+    - "'.pullapprove.yml' in files"
     reviewers:
       teams:
       - admins
+    reviews:
+      required: 1
