@@ -7,7 +7,6 @@ pullapprove_conditions:
 notifications:
 - when: pull_request.opened
   # only need to send this to external-contributors
-  if: "author_association in ['FIRST_TIMER', 'FIRST_TIME_CONTRIBUTOR', 'CONTRIBUTOR']"
   comment: >
     Hey @{{ author }}, please make sure your tests pass and you have looked everything over. Then we will review.
 
@@ -18,8 +17,8 @@ notifications:
 groups:
   code:
     reviewers:
-      users: paolinidesign
-      - username
+      users:
+      - paolinidesign
       teams:
       - team-slug
     reviews:
