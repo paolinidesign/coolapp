@@ -5,4 +5,4 @@ Hello word
 # today
 Rainy :(
 # Tomorrow
-Still reainy :(
+Still rainy :(
