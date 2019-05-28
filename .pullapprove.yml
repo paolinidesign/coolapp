@@ -4,6 +4,6 @@ groups:
     - "'.pullapprove.yml' in files"
     reviewers:
       teams:
-      - admins
+      - paolinidesign
     reviews:
       required: 1
