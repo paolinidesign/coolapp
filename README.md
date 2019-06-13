@@ -3,6 +3,6 @@
 # coolapp
 Hello!
 # today
-Rainy :( :( :(
+Hot!
 # Tomorrow
 Cloudy
