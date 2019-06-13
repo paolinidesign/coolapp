@@ -1,7 +1,7 @@
 groups:
   pullapprove:
     conditions:
-    - "'.pullapprove.yml' in files"
+    - "'pullapprove.yml' in files"
     reviewers:
       users:
       - paolinidesign
