@@ -3,7 +3,7 @@ groups:
     conditions:
     - "'.pullapprove.yml' in files"
     reviewers:
-      teams:
+      users:
       - paolinidesign
     reviews:
       required: 1
